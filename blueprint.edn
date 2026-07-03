@@ -1,0 +1,11 @@
+{:itonami.blueprint/id "cloud-itonami-9609"
+ :itonami.blueprint/name "Other personal service activities n.e.c."
+ :itonami.blueprint/isic-rev5 "9609"
+ :itonami.blueprint/domain :services/other-personal-services
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:community-access :data-sovereignty :transparency]
+ :itonami.blueprint/governor :personal-service-governor
+ :itonami.blueprint/required-technologies [:robotics :identity :forms :dmn :bpmn :audit-ledger]
+ :itonami.blueprint/optional-technologies []
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/robotics true}
