@@ -2,7 +2,7 @@
 
 ## Classification
 
-- Repository: `cloud-itonami-9609`
+- Repository: `cloud-itonami-isic-9609`
 - ISIC Rev.5: `9609`
 - Activity: other personal service activities not elsewhere classified (e.g. matchmaking services, genealogical research, personal shopping/concierge)
 - Social impact: community access, data sovereignty, transparent audit

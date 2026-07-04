@@ -1,6 +1,6 @@
 # Governance
 
-`cloud-itonami-9609` is an OSS open-business blueprint for other personal service activities not elsewhere classified (e.g. matchmaking services, genealogical research, personal shopping/concierge).
+`cloud-itonami-isic-9609` is an OSS open-business blueprint for other personal service activities not elsewhere classified (e.g. matchmaking services, genealogical research, personal shopping/concierge).
 Governance covers both the capability layer and the operator model.
 
 ## Maintainers

@@ -1,4 +1,4 @@
-# cloud-itonami-9609
+# cloud-itonami-isic-9609
 
 Open Business Blueprint for **ISIC Rev.5 9609**: Other personal service activities n.e.c..
 

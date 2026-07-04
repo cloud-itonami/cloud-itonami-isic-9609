@@ -1,4 +1,4 @@
-{:itonami.blueprint/id "cloud-itonami-9609"
+{:itonami.blueprint/id "cloud-itonami-isic-9609"
  :itonami.blueprint/name "Other personal service activities n.e.c."
  :itonami.blueprint/isic-rev5 "9609"
  :itonami.blueprint/domain :services/other-personal-services
