@@ -33,10 +33,9 @@
   always a query over an immutable log -- the audit trail a customer
   trusting a personal-service provider needs, and the evidence an
   operator needs if a referral decision is later disputed."
-  (:require #?(:clj  [clojure.edn :as edn]
-               :cljs [cljs.reader :as edn])
-            [personalservice.registry :as registry]
-            [langchain.db :as d]))
+  (:require [personalservice.registry :as registry]
+            [langchain.db :as d]
+            [langchain-store.core :as ls]))
 
 (defprotocol Store
   (client [s id])
@@ -150,8 +149,10 @@
    :referral/seq                    {:db/unique :db.unique/identity}
    :sequence/jurisdiction             {:db/unique :db.unique/identity}})
 
-(defn- enc [v] (pr-str v))
-(defn- dec* [s] (when s (edn/read-string s)))
+;; the EDN-blob codec (enc/dec*) is shared machinery -- see
+;; kotoba-lang/langchain-store's docstring (ADR-2607141600).
+(defn- enc [v] (ls/enc v))
+(defn- dec* [s] (ls/dec* s))
 
 (defn- client->tx [{:keys [id client-name days-since-contract-signed
                           background-check-not-cleared? referral-finalized?
