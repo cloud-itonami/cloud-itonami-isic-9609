@@ -38,7 +38,7 @@
   personal-service provider would keep, not the act of finalizing the
   referral itself (that is `personalservice.operation`'s `:actuation/
   finalize-referral`, always human-gated -- see README `Actuation`)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- unsigned-certificate
   "Every certificate this actor produces is UNSIGNED -- signature is the
@@ -89,7 +89,7 @@
     (throw (ex-info "referral-finalization: jurisdiction required" {})))
   (when (< sequence 0)
     (throw (ex-info "referral-finalization: sequence must be >= 0" {})))
-  (let [referral-number (str (str/upper-case jurisdiction) "-REF-" (zero-pad sequence 6))
+  (let [referral-number (str (str/upper jurisdiction) "-REF-" (zero-pad sequence 6))
         record {"record_id" referral-number
                 "kind" "referral-finalization-draft"
                 "client_id" client-id
