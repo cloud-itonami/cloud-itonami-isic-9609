@@ -94,7 +94,7 @@ isic-6492`'s real status-lifecycle bug (ADR-2607071320).
 `personalservice.store/Store` is implemented by both `MemStore`
 (atom-backed, default for dev/tests/demo) and `DatomicStore`
 (`langchain.db`-backed), proven to satisfy the same contract in
-`test/personalservice/store_contract_test.clj` -- the same seam
+`test/personalservice/store_contract_test.kotoba` -- the same seam
 every sibling actor uses so swapping the SSoT backend is a
 configuration change, not a rewrite. The protocol's per-entity
 accessor is named `client` directly -- not a Clojure special form, so

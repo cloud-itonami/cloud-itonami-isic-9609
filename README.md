@@ -207,14 +207,14 @@ only -- no bespoke domain capability lib to reference at all.
 
 | File | Role |
 |---|---|
-| `src/personalservice/store.cljc` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + referral-finalization history. No dynamically-filed sub-record -- the actuation op acts directly on a pre-seeded client, and the double-actuation guard checks a dedicated `:referral-finalized?` boolean rather than a `:status` value |
-| `src/personalservice/registry.cljc` | Referral-finalization draft records, plus `cooling-off-period-not-elapsed?` -- the EIGHTH instance of this fleet's MINIMUM-threshold sufficiency check family (`veterinary`/`funeral`/`hospital` established the first three "temporal" instances, `association`/`secondary`/`polling`/`research` the fourth through seventh "non-temporal" instances), RETURNING to a temporal ground truth for a genuinely new domain concept |
-| `src/personalservice/facts.cljc` | Per-jurisdiction consumer-protection/cooling-off catalog with an official spec-basis citation per entry, honest coverage reporting |
-| `src/personalservice/personalserviceadvisor.cljc` | **PersonalServiceOps-LLM** -- `mock-advisor` ‖ `llm-advisor`; intake/service-plan-verification/background-check-screening/referral-finalization proposals |
-| `src/personalservice/governor.cljc` | **Personal Service Governor** -- 4 HARD checks (spec-basis · evidence-incomplete · cooling-off-period-not-elapsed, temporal ground-truth recompute, GENUINELY NEW · background-check-not-cleared, unconditional evaluation, the THIRD literal instance of `school`'s/`sports`'s concept, the 48th grounding of this discipline overall) + already-finalized guard + 1 soft (confidence/actuation gate) |
-| `src/personalservice/phase.cljc` | **Phase 0→3** -- read-only → assisted intake → assisted verify → supervised (referral finalization always human; client intake is the ONLY auto-eligible op, no direct capital risk) |
-| `src/personalservice/operation.cljc` | **OperationActor** -- langgraph-clj StateGraph |
-| `src/personalservice/sim.cljc` | demo driver |
+| `src/personalservice/store.kotoba` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + referral-finalization history. No dynamically-filed sub-record -- the actuation op acts directly on a pre-seeded client, and the double-actuation guard checks a dedicated `:referral-finalized?` boolean rather than a `:status` value |
+| `src/personalservice/registry.kotoba` | Referral-finalization draft records, plus `cooling-off-period-not-elapsed?` -- the EIGHTH instance of this fleet's MINIMUM-threshold sufficiency check family (`veterinary`/`funeral`/`hospital` established the first three "temporal" instances, `association`/`secondary`/`polling`/`research` the fourth through seventh "non-temporal" instances), RETURNING to a temporal ground truth for a genuinely new domain concept |
+| `src/personalservice/facts.kotoba` | Per-jurisdiction consumer-protection/cooling-off catalog with an official spec-basis citation per entry, honest coverage reporting |
+| `src/personalservice/personalserviceadvisor.kotoba` | **PersonalServiceOps-LLM** -- `mock-advisor` ‖ `llm-advisor`; intake/service-plan-verification/background-check-screening/referral-finalization proposals |
+| `src/personalservice/governor.kotoba` | **Personal Service Governor** -- 4 HARD checks (spec-basis · evidence-incomplete · cooling-off-period-not-elapsed, temporal ground-truth recompute, GENUINELY NEW · background-check-not-cleared, unconditional evaluation, the THIRD literal instance of `school`'s/`sports`'s concept, the 48th grounding of this discipline overall) + already-finalized guard + 1 soft (confidence/actuation gate) |
+| `src/personalservice/phase.kotoba` | **Phase 0→3** -- read-only → assisted intake → assisted verify → supervised (referral finalization always human; client intake is the ONLY auto-eligible op, no direct capital risk) |
+| `src/personalservice/operation.kotoba` | **OperationActor** -- langgraph-clj StateGraph |
+| `src/personalservice/sim.kotoba` | demo driver |
 | `test/personalservice/*_test.clj` | governor contract · phase invariants · store parity · registry conformance · facts coverage |
 
 ## Business-process coverage (honest)
