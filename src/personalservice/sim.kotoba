@@ -1,5 +1,5 @@
 (ns personalservice.sim
-  "Demo driver -- `clojure -M:dev:run`. Walks a clean client through
+  "Demo driver -- `kbb -M:dev:run`. Walks a clean client through
   intake -> service-plan verification -> background-check screening ->
   referral-finalization proposal (always escalates) -> human approval
   -> commit, then shows four HARD holds (a jurisdiction with no spec-
